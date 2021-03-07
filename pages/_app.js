@@ -11,8 +11,9 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Adriele Rodrigues</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,100&display=swap" rel="stylesheet"></link>
+        <link rel="icon" type="image/ico" href="/images/Icon.ico" sizes="32x32" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,100&display=swap" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />

@@ -1,9 +1,8 @@
 import React from 'react';
 import MenuWrapper from './styles/MenuWrapper';
 import Text from '../../foundation/Text';
-import links from '../../../../mocks/links';
+import links from '../../../../mocks/links.json';
 import ProfileImage from './profile';
-
 
 export default function Menu() {
   return (

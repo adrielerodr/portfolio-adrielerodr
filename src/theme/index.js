@@ -28,13 +28,21 @@ const colors = {
   },
   tertiary: {
     main: {
-      color: '#fff',
+      color: '#FFFFFF',
       contrastText: '#070C0E',
     },
     light: {
       color: '#88989E',
-      contrastText: '#fff',
+      contrastText: '#FFFFFF',
     },
+  },
+  error: {
+    color: '#E32B2B',
+    contrastText: '#FFFFFF',
+  },
+  success: {
+    color: '#0E802E',
+    contrastText: '#FFFFFF',
   },
   modes: {
     dark: {},

@@ -30,6 +30,8 @@ function propToStyle(propName) {
         },
       });
     }
+
+    return '';
   };
 }
 
