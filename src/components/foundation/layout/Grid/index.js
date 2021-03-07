@@ -34,8 +34,10 @@ const Grid = {
   Row: styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-right: -16px;
-    margin-left: -16px;
+    ${propToStyle('padding')}
+    ${propToStyle('borderRadius')}
+    ${propToStyle('backgroundColor')}
+    ${propToStyle('flexDirection')}
     ${propToStyle('justifyContent')}
   `,
   Col: styled.div`

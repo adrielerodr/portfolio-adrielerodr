@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from '../foundation/Text';
-import Grid from '../../components/foundation/layout/Grid';
+import Grid from '../foundation/layout/Grid';
 import CoverComponent from './styles';
 
 export default function Cover() {

@@ -8,8 +8,12 @@ const Box = styled.div`
   ${propToStyle('padding')}
   ${propToStyle('display')}
   ${propToStyle('flexWrap')}
+  ${propToStyle('marginTop')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('borderRadius')}
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
+  ${propToStyle('backgroundColor')}
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}

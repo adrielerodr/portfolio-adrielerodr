@@ -18,8 +18,8 @@ export const TextStyleVariantsMap = {
   title: css`
     ${({ theme }) => textStyle({ theme, variant: 'titleXS' })}
     ${breakpointsMedia({
-      md: ({ theme }) => textStyle({ theme, variant: 'title' }),
-    })}
+    md: ({ theme }) => textStyle({ theme, variant: 'title' }),
+  })}
   `,
 };
 
@@ -37,17 +37,15 @@ const Text = ({
   children,
   tag,
   ...props
-}) => {
-  return (
-    <TextBase
-      as={tag}
-      variant={variant}
-      {...props}
-    >
-      {children}
-    </TextBase>
-  );
-}
+}) => (
+  <TextBase
+    as={tag}
+    variant={variant}
+    {...props}
+  >
+    {children}
+  </TextBase>
+);
 
 Text.defaultProps = {
   tag: 'span',

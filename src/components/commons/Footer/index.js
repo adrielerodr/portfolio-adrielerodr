@@ -28,10 +28,10 @@ const FooterWrapper = styled.footer`
 FooterWrapper.FooterIcon = styled.a`
  ${breakpointsMedia({
     lg: {
-      margin: '20px 10px'
+      margin: '20px 10px',
     },
     md: {
-      margin: '10px 5px'
+      margin: '10px 5px',
     },
   })}
 `;

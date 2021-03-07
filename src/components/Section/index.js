@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Text from '../foundation/Text';
 import Grid from '../foundation/layout/Grid';
 import Box from '../foundation/layout/Box';
@@ -19,8 +20,12 @@ export default function Section({ sectionTitle, children }) {
       >
         <Grid.Row>
           <Grid.Col
-            value={{ xs: 12, sm: 12, md: 12, lg: 12 }}
-            offset={{ xs: 0, sm: 0, md: 0, lg: 0 }}
+            value={{
+              xs: 12, sm: 12, md: 12, lg: 12,
+            }}
+            offset={{
+              xs: 0, sm: 0, md: 0, lg: 0,
+            }}
             display="flex"
             alignItems="flex-start"
             justifyContent="center"
@@ -48,3 +53,13 @@ export default function Section({ sectionTitle, children }) {
     </Box>
   );
 }
+
+Section.propTypes = {
+  sectionTitle: PropTypes.string,
+  children: PropTypes.node,
+};
+
+Section.defaultProps = {
+  sectionTitle: {},
+  children: {},
+};
