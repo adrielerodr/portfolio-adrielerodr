@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '../foundation/layout/Grid';
-import Text from '../foundation/Text';
 import Button from '../commons/Button';
 import Modal from '../commons/Modal';
 import MessageForm from '../MessageForm';
@@ -19,24 +18,14 @@ export default function ContactBox() {
           alignItems="center"
           justifyContent="center"
           flexDirection="column"
+          marginTop={30}
         >
-          <Text
-            variant="paragraph1"
-            tag="p"
-            color="tertiary.main"
-            textAlign={{
-              xs: 'center',
-              md: 'center',
-            }}
-          >
-            Entre em contato
-          </Text>
           <Button
             display="block"
             variant="primary.main"
             onClick={() => setStateContactModalState(!isContactModalOpen)}
           >
-            +
+            Entre em contato
           </Button>
         </Grid.Col>
       </Grid.Row>
@@ -45,6 +34,7 @@ export default function ContactBox() {
         onClose={() => {
           setStateContactModalState(false);
         }}
+        border="1px solid white"
       >
         {(ModalProps) => (
           <MessageForm modalProps={ModalProps} />

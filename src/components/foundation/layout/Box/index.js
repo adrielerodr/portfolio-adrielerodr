@@ -4,6 +4,7 @@ import propToStyle from '../../../../theme/utils/propToStyle';
 const Box = styled.div`
   ${propToStyle('flex')}
   ${propToStyle('width')}
+  ${propToStyle('border')}
   ${propToStyle('height')}
   ${propToStyle('padding')}
   ${propToStyle('display')}

@@ -6,10 +6,10 @@ import Box from '../foundation/layout/Box';
 import Text from '../foundation/Text';
 import errorAnimation from '../../../public/images/animations/error.json';
 import successAnimation from '../../../public/images/animations/success.json';
+import postMessage from '../../requests/postMessage';
 
 const formStates = {
   DEFAULT: 'DEFAULT',
-  LOADING: 'LOADING',
   DONE: 'DONE',
   ERROR: 'ERROR',
 };
@@ -26,6 +26,26 @@ function FormContent() {
 
   function emailIsInvalid() {
     return messageInfo.email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(messageInfo.email);
+  }
+
+  function handlePostMessage() {
+    const messageDTO = {
+      name: messageInfo.name,
+      email: messageInfo.email,
+      message: messageInfo.message,
+    };
+
+    return postMessage(messageDTO)
+      .then(() => {
+        setSubmissionStatus(formStates.DONE);
+        setMessageInfo({
+          name: '',
+          email: '',
+          message: '',
+        });
+      }).catch(() => {
+        setSubmissionStatus(formStates.ERROR);
+      }).finally(() => setTimeout(() => setSubmissionStatus(formStates.DEFAULT), 10000));
   }
 
   function handleChange(event) {
@@ -45,37 +65,7 @@ function FormContent() {
       onSubmit={(event) => {
         event.preventDefault();
         setIsFormSubmited(true);
-        const messageDTO = {
-          name: messageInfo.name,
-          email: messageInfo.email,
-          message: messageInfo.message,
-        };
-
-        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(messageDTO),
-        })
-          .then((response) => {
-            if (response.ok) {
-              return response.json();
-            }
-
-            throw new Error('Não foi possível enviar mensagem agora :(');
-          })
-          .then(() => {
-            setSubmissionStatus(formStates.DONE);
-            setMessageInfo({
-              name: '',
-              email: '',
-              message: '',
-            });
-          })
-          .catch(() => {
-            setSubmissionStatus(formStates.ERROR);
-          });
+        handlePostMessage();
       }}
     >
       <Box
@@ -158,7 +148,7 @@ function FormContent() {
             <Lottie
               width="50px"
               height="50px"
-              config={{ animationData: successAnimation, loop: true, autoplay: true }}
+              config={{ animationData: successAnimation, loop: false, autoplay: true }}
             />
             <Text
               variant="smallestException"
@@ -182,7 +172,7 @@ function FormContent() {
             <Lottie
               width="50px"
               height="50px"
-              config={{ animationData: errorAnimation, loop: true, autoplay: true }}
+              config={{ animationData: errorAnimation, loop: false, autoplay: true }}
             />
             <Text
               variant="smallestException"

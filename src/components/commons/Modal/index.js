@@ -73,14 +73,16 @@ function Modal({ isOpen, onClose, children }) {
           flex={1}
           marginLeft={0}
           marginRight={0}
+          borderRadius={5}
           justifyContent="flex-end"
           backgroundColor="#A96D6D"
-          borderRadius={5}
         >
           <Grid.Col
             flex={1}
+            margin={8}
             display="flex"
             flexDirection="column"
+            border="1px solid white"
             paddingRight={{ md: '0' }}
           >
             <motion.button

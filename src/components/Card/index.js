@@ -25,9 +25,6 @@ const Card = ({ project }) => (
               flexDirection="column"
               padding={0}
             >
-              <CardWrapper.CardFlag>
-                Destaque
-              </CardWrapper.CardFlag>
               <CardWrapper.HighlightedCardImage
                 alt={project.title}
                 src={`/images/${project.image}`}

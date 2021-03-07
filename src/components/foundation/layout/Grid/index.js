@@ -132,11 +132,14 @@ const Grid = {
         : '',
     });
   }}
+    ${propToStyle('margin')}
+    ${propToStyle('border')}
     ${propToStyle('padding')}
     ${propToStyle('display')}
+    ${propToStyle('marginTop')}
     ${propToStyle('alignItems')}
-    ${propToStyle('justifyContent')}
     ${propToStyle('flexDirection')}
+    ${propToStyle('justifyContent')}
   `,
 };
 

@@ -45,7 +45,7 @@ export default function Section({ sectionTitle, children }) {
           </Grid.Col>
         </Grid.Row>
         <Grid.Row
-          justifyContent="flex-start"
+          justifyContent="center"
         >
           { children }
         </Grid.Row>

@@ -42,6 +42,7 @@ CardWrapper.CardTitle = styled.h5`
 
 CardWrapper.CardText = styled.div`
   color: white;
+  margin: 0 16px;
 `;
 
 CardWrapper.CardFlag = styled.h6`
