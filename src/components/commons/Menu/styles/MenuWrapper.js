@@ -5,6 +5,7 @@ import breakpointsMedia from '../../../../theme/utils/breackpointsMedia';
 const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -13,6 +14,7 @@ const MenuWrapper = styled.nav`
   padding-right: 28px;
   ${breakpointsMedia({
     md: css`
+      flex-direction: row;
       justify-content: flex-start;
       margin-top: 32px;
       margin-left: auto;
@@ -35,7 +37,7 @@ MenuWrapper.LeftSide = styled.div`
   margin: 0;
   order: 1;
   ${breakpointsMedia({
-    md: css`
+    sm: css`
       width: 131px;
       height: 32px;
     `,
@@ -92,7 +94,6 @@ MenuWrapper.Central = styled.div`
     &:focus {
       font-weight: 500;
       color: #070C0E;
-      
     }
   }
 `;

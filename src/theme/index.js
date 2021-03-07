@@ -16,14 +16,14 @@ const colors = {
   },
   primary: {
     main: {
-      color: '#D7385E',
-      contrastText: '#fff',
+      color: '#A96D6D',
+      contrastText: '#FFFFFF',
     },
   },
   secondary: {
     main: {
       color: '#FB7B6B',
-      contrastText: '#fff',
+      contrastText: '#FFFFFF',
     },
   },
   tertiary: {
