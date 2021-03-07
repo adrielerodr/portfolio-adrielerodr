@@ -5,10 +5,11 @@ const Box = styled.div`
   ${propToStyle('flex')}
   ${propToStyle('width')}
   ${propToStyle('height')}
+  ${propToStyle('padding')}
   ${propToStyle('display')}
+  ${propToStyle('flexWrap')}
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
-  ${propToStyle('flexWrap')}
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}

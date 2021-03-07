@@ -26,6 +26,7 @@ const Container = styled.div`
     `,
   })}
   ${propToStyle('marginTop')}
+  ${propToStyle('padding')}
 `;
 
 const Grid = {
@@ -35,6 +36,7 @@ const Grid = {
     flex-wrap: wrap;
     margin-right: -16px;
     margin-left: -16px;
+    ${propToStyle('justifyContent')}
   `,
   Col: styled.div`
     padding-right: 16px;
@@ -128,6 +130,7 @@ const Grid = {
         : '',
     });
   }}
+    ${propToStyle('padding')}
     ${propToStyle('display')}
     ${propToStyle('alignItems')}
     ${propToStyle('justifyContent')}

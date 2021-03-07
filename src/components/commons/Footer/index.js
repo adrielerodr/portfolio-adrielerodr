@@ -5,11 +5,16 @@ import MediumLogo from './icons/medium';
 import breakpointsMedia from '../../../theme/utils/breackpointsMedia';
 
 const FooterWrapper = styled.footer`
-  padding: 14px;
+  bottom: 0;
+  width: 100%;
+  padding: 7px;
+  padding-right: 28px;
+  padding-left: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.primary.main.color};
+  /* background-image: linear-gradient(to right, #f24867, #ec3371, #e41c7c, #d80088, #c80095, #b400a3, #9a04b0, #771cbc); */
   a {
     text-decoration: none;
     transition: .3s;

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Projeto 1",
+    "image": "project_1.png",
+    "isHighlighted": true,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+  },
+  {
+    "title": "Projeto 2",
+    "image": "project_2.png",
+    "isHighlighted": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+  },
+  {
+    "title": "Projeto 3",
+    "image": "project_3.png",
+    "isHighlighted": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+  },
+  {
+    "title": "Projeto 4",
+    "image": "project_4.png",
+    "isHighlighted": false,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie rhoncus vestibulum. Aenean blandit velit."
+  }
+]
