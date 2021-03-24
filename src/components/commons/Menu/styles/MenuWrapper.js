@@ -50,7 +50,7 @@ MenuWrapper.LeftSide = styled.div`
   })}
 `;
 
-MenuWrapper.Central = styled.div`
+MenuWrapper.Central = styled.ul`
   padding: 0;
   margin: 0;
   order: 3;
