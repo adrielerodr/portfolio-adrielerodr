@@ -1,10 +1,10 @@
 [
   {
-    "name": "Sobre mim",
-    "url": "/about"
+    "name": "Home",
+    "url": "/"
   },
   {
-    "name": "Contato",
-    "url": "/contact"
+    "name": "Sobre mim",
+    "url": "/about"
   }
 ]

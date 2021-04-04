@@ -2,9 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Head from 'next/head';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../src/theme/GlobalStyles';
-import theme from '../src/theme';
+import SEO from '../src/components/commons/SEO';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,10 +13,8 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,100&display=swap" rel="stylesheet" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <SEO headTitle="Home" />
+      <Component {...pageProps} />
     </>
   );
 }

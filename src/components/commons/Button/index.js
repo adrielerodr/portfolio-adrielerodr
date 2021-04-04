@@ -6,7 +6,7 @@ import breakpointsMedia from '../../../theme/utils/breackpointsMedia';
 
 const ButtonGhost = css`
   background-color: transparent;
-  color: ${(props) => get(props.theme, `colors.${props.variant}.main.color`)};
+  color: ${(props) => get(props.theme, `colors.${props.variant}.main.contrastText`)};
 `;
 
 const ButtonDefault = css`
