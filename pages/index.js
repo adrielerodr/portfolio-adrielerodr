@@ -2,9 +2,10 @@ import React from 'react';
 import Grid from '../src/components/foundation/layout/Grid';
 import Box from '../src/components/foundation/layout/Box';
 import Cover from '../src/components/Cover';
-import WrapperProjects from '../src/components/WrapperProjects';
+import WrapperProjects from '../src/components/wrappers/WrapperProjects';
 import ContactBox from '../src/components/Contact';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
+import projects from '../db/projects.json';
 
 function HomeScreen() {
   return (
@@ -29,7 +30,7 @@ function HomeScreen() {
             justifyContent="center"
             flexDirection="column"
           >
-            <WrapperProjects />
+            <WrapperProjects projects={projects} />
           </Grid.Col>
         </Grid.Row>
         <ContactBox />

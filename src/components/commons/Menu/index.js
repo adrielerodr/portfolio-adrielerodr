@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ProfileImage from './profile';
 import { Text } from '../../foundation/Text';
 import MenuWrapper from './styles/MenuWrapper';
-import links from '../../../../mocks/links.json';
+import links from '../../../../db/links.json';
 import Button from '../Button';
 
 export default function Menu({ profilePic, toggleModalContact }) {

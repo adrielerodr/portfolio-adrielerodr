@@ -7,7 +7,7 @@ import Grid from '../src/components/foundation/layout/Grid';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 import { Text } from '../src/components/foundation/Text';
 import Section from '../src/components/Section';
-import WrapperRepositories from '../src/components/WrapperRepositories';
+import WrapperRepositories from '../src/components/wrappers/WrapperRepositories';
 import getRepositories from '../src/requests/getRepositories';
 
 function AboutScreen({ repositories }) {

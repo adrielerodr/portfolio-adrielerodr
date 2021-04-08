@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Section from '../Section';
-import { Text } from '../foundation/Text';
-import Grid from '../foundation/layout/Grid';
+import Section from '../../Section';
+import { Text } from '../../foundation/Text';
+import Grid from '../../foundation/layout/Grid';
 
 export default function WrapperRepositories({ repositories }) {
   return (
@@ -22,7 +22,7 @@ export default function WrapperRepositories({ repositories }) {
                 justifyContent="center"
                 flexDirection="column"
                 padding={0}
-                margin={28}
+                margin="28px 0"
               >
                 <Text
                   id={repo.id}
