@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CardWrapper from './styles';
 import Grid from '../foundation/layout/Grid';
-import Text from '../foundation/Text';
+import { Text } from '../foundation/Text';
 
 const Card = ({ project }) => (
   <CardWrapper>
@@ -44,6 +44,7 @@ const Card = ({ project }) => (
                 <Text
                   tag="p"
                   variant="h5"
+                  color="primary.main"
                 >
                   { project.title }
                 </Text>
@@ -52,6 +53,7 @@ const Card = ({ project }) => (
                 <Text
                   tag="p"
                   variant="paragraph1"
+                  color="tertiary.light"
                   display={{
                     xs: 'none',
                     md: 'block',
@@ -83,7 +85,13 @@ const Card = ({ project }) => (
             src={`/images/${project.image}`}
           />
           <CardWrapper.CardTitle>
-            { project.title }
+            <Text
+              tag="p"
+              variant="h5"
+              color="primary.main"
+            >
+              { project.title }
+            </Text>
           </CardWrapper.CardTitle>
         </Grid.Col>
       )}
