@@ -19,17 +19,32 @@ const StyledLink = styled.a`
   }
 `;
 
-export default function Link({ href, children, ...props }) {
-  return (
-    <NextLink href={href} passHref>
-      <StyledLink {...props}>
-        {children}
-      </StyledLink>
-    </NextLink>
-  );
+export default function Link({
+  href, openNewTab, children, ...props
+}) {
+  return openNewTab
+    ? (
+      <NextLink href={href} passHref>
+        <StyledLink target="_blank" {...props}>
+          {children}
+        </StyledLink>
+      </NextLink>
+    )
+    : (
+      <NextLink href={href} passHref>
+        <StyledLink {...props}>
+          {children}
+        </StyledLink>
+      </NextLink>
+    );
 }
+
+Link.defaultProps = {
+  openNewTab: false,
+};
 
 Link.propTypes = {
   href: PropTypes.string.isRequired,
+  openNewTab: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };

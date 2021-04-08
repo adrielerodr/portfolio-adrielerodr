@@ -1,7 +1,17 @@
 module.exports = [
   {
-    source: '/login/',
-    destination: '/app/login/',
-    permanent: true, // 308, 307
+    source: '/home/',
+    destination: '/',
+    permanent: true,
+  },
+  {
+    source: '/home',
+    destination: '/',
+    permanent: true,
+  },
+  {
+    source: '/about',
+    destination: '/about/',
+    permanent: true,
   },
 ];

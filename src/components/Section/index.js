@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Text from '../foundation/Text';
+import { Text } from '../foundation/Text';
 import Grid from '../foundation/layout/Grid';
 import Box from '../foundation/layout/Box';
 
@@ -27,7 +27,7 @@ export default function Section({ sectionTitle, children }) {
               xs: 0, sm: 0, md: 0, lg: 0,
             }}
             display="flex"
-            alignItems="flex-start"
+            alignItems="center"
             justifyContent="center"
             flexDirection="column"
           >
@@ -37,7 +37,7 @@ export default function Section({ sectionTitle, children }) {
               color="tertiary.main"
               textAlign={{
                 xs: 'center',
-                md: 'left',
+                md: 'center',
               }}
             >
               { sectionTitle }

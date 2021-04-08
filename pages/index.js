@@ -44,7 +44,6 @@ export default websitePageHOC(HomeScreen, {
       headTitle: 'Home',
     },
     pageBoxProps: {
-      padding: '28px',
       flexWrap: 'wrap',
       backgroundImage: 'url(/images/background.png)',
     },

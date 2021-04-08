@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CardWrapper from './styles';
 import Grid from '../foundation/layout/Grid';
-import Text from '../foundation/Text';
+import { Text } from '../foundation/Text';
 
 const Card = ({ project }) => (
   <CardWrapper>

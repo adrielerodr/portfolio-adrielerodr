@@ -1,10 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import styled, { css } from 'styled-components';
-import get from 'lodash/get';
 import PropTypes from 'prop-types';
+import get from 'lodash/get';
+import styled, { css } from 'styled-components';
 import propToStyle from '../../../theme/utils/propToStyle';
 import breakpointsMedia from '../../../theme/utils/breackpointsMedia';
+import Link from '../../commons/Link';
 
 const textStyle = ({ theme, variant }) => css`
   font-size: ${theme.typographyVariants[variant].fontSize};
@@ -19,43 +19,65 @@ export const TextStyleVariantsMap = {
     ${({ theme }) => textStyle({ theme, variant: 'titleXS' })}
     ${breakpointsMedia({
     md: ({ theme }) => textStyle({ theme, variant: 'title' }),
-  })}
-  `,
+  })
+}`,
 };
 
 const TextBase = styled.span`
   ${(props) => TextStyleVariantsMap[props.variant]}
-  color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
+  color: ${(props) => get(props.theme, `colors.${props.color}.color`)};
   ${propToStyle('textAlign')}
   ${propToStyle('marginBottom')}
   ${propToStyle('margin')}
-  ${propToStyle('display')}
 `;
 
-const Text = ({
+export function Text({
+  tag,
   variant,
   children,
-  tag,
+  href,
+  openNewTab,
   ...props
-}) => (
-  <TextBase
-    as={tag}
-    variant={variant}
-    {...props}
-  >
-    {children}
-  </TextBase>
-);
+}) {
+  if (href) {
+    return (
+      <TextBase
+        as={Link}
+        href={href}
+        variant={variant}
+        openNewTab={openNewTab}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </TextBase>
+    );
+  }
+
+  return (
+    <TextBase
+      as={tag}
+      variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    >
+      {children}
+    </TextBase>
+  );
+}
+
+Text.propTypes = {
+  tag: PropTypes.string,
+  href: PropTypes.string,
+  openNewTab: PropTypes.bool,
+  variant: PropTypes.string,
+  children: PropTypes.node,
+};
 
 Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph1',
+  children: null,
+  href: '',
+  openNewTab: false,
 };
-
-Text.propTypes = {
-  tag: PropTypes.string,
-  variant: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
-
-export default Text;

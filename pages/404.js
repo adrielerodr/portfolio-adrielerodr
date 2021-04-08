@@ -24,7 +24,6 @@ export default websitePageHOC(NotFoundScreen, {
       headTitle: 'Not Found',
     },
     pageBoxProps: {
-      padding: '28px',
       flexWrap: 'wrap',
     },
   },
